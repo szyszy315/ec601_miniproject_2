@@ -32,7 +32,7 @@ There will be k proposals per sliding-window location, the RPNs cangenerate more
 
 Mask R-CNN
 ----
-MaskR-CNN extends FasterR-CNN by adding a branch for predicting an object mask inparallelwith the existing branch for bounding box recogni-tion. <br>
+MaskR-CNN extends FasterR-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recogni-tion.  Mask R-CNN is simple to implement andtrain given the Faster R-CNN framework, which facilitatesa wide range of flexible architecture designs. Additionally,the mask branch only adds a small computational overhead,enabling a fast system and rapid experimentation. Mask R-CNN outputs a binary mask for each RoI and the classification depends on masks, which makes this system different from others. Instance segmentation enables us to obtain a pixel-wise mask for each individual object in an image. <br>
 Advantage：<br>
 1.Easy to generalize to other tasks.<br>
 2.Fast train and test speeds.<br>
@@ -41,12 +41,14 @@ Advantage：<br>
 
 Recommendations for a person who want to develop or use such systems
 ----
-1.users can increase the accurracy of prediction by using the result of multiple models.<br>
-2.developer should concentrate more on <br>
+1.Users can increase the accurracy of prediction by using the result of multiple models.<br>
 
+conclusion
+----
+The vision community has rapidly improved object detection and semantic segmentation results over a short period of time and will keep making it better in the future. A large part of these advances are the result of development of powerful  baseline  systems,  such  as  the  Fast/Faster  R-CNN and Fully Convolutional Network (FCN) frameworks for object detection. These methods are conceptually intuitiveand offer flexibility and robustness, together with fast training and inference time. <br>
 
 references:
-----
+--- 
 [1]Faster R-CNN: Towards Real-Time ObjectDetection with Region Proposal Networks, Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun<br>
 [2]Mask R-CNN, Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick; The IEEE International Conference on Computer Vision (ICCV), 2017, pp. 2961-2969 <br>
 [3]Rethinking the Faster R-CNN Architecture for Temporal Action Localization, Yu-Wei Chao, Sudheendra Vijayanarasimhan, Bryan Seybold, David A. Ross, Jia Deng, Rahul Sukthankar; The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018, pp. 1130-1139<br> 
