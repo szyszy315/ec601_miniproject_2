@@ -25,10 +25,10 @@ Faster R-CNN
 ----
 FasterR-CNN makes use of Region Proposal Networks(RPNs) which can share convolutional layers with state-of-the-art objectdetection networks to creat region proposal. Faster-RCNN is composed of two modules. The first module is a deepfully convolutional network that proposes regions,and the second module is RPNs. RPNs takes an image as input and outputs a set of rectangular object proposals, each with  an objectness score.<br>
 
-###Region Proposal Networks
+###Region Proposal Networks<br>
 A Region Proposal Network (RPN) takes an image(of any size) as input and outputs a set of rectangularobject proposals, each  with an objectness  score.<br>
 
-###Anchors
+###Anchors<br>
 There will be k proposals per sliding-window location, the RPNs cangenerate more proposals by changing the value of k,which is the number of maximum possible proposals for each location. The k proposals are parameterized relative to k reference boxes, which is so called anchors. An anchor is centered at the sliding windowin question, and is associated with a scale and aspect ratio. k = scale ratio * aspect ratio. The anchors are translation-invariant, if an object is translated the proposal will still be the same. Translation invariant also makes model's size smaller. <br>
 ![image](https://github.com/szyszy315/hello-world/blob/master/project2_image3.png)
 ![image](https://github.com/szyszy315/hello-world/blob/master/project2_image5.png)
