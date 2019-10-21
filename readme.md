@@ -26,7 +26,7 @@ Faster R-CNN
 FasterR-CNN makes use of Region Proposal Networks(RPNs) which can share convolutional layers with state-of-the-art objectdetection networks to creat region proposal. Faster-RCNN is composed of two modules. The first module is a deepfully convolutional network that proposes regions,and the second module is RPNs. RPNs takes an image as input and outputs a set of rectangular object proposals, each with  an objectness score.<br>
 
 ###Region Proposal Networks<br>
-A Region Proposal Network (RPN) takes an image(of any size) as input and outputs a set of rectangularobject proposals, each  with an objectness  score.<br>
+A Region Proposal Network (RPN) takes an image(of any size) as input and outputs a set of rectangularobject proposals, each with an objectness score.<br>
 
 ###Anchors<br>
 There will be k proposals per sliding-window location, the RPNs cangenerate more proposals by changing the value of k,which is the number of maximum possible proposals for each location. The k proposals are parameterized relative to k reference boxes, which is so called anchors. An anchor is centered at the sliding windowin question, and is associated with a scale and aspect ratio. k = scale ratio * aspect ratio. The anchors are translation-invariant, if an object is translated the proposal will still be the same. Translation invariant also makes model's size smaller. <br>
@@ -35,7 +35,7 @@ There will be k proposals per sliding-window location, the RPNs cangenerate more
 
 Mask R-CNN
 ----
-MaskR-CNN extends FasterR-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recogni-tion.  Mask R-CNN is simple to implement andtrain given the Faster R-CNN framework, which facilitatesa wide range of flexible architecture designs. Additionally,the mask branch only adds a small computational overhead,enabling a fast system and rapid experimentation. Mask R-CNN outputs a binary mask for each RoI and the classification depends on masks, which makes this system different from others. Instance segmentation enables us to obtain a pixel-wise mask for each individual object in an image. <br>
+Mask R-CNN extends Faster R-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recognition.  Mask R-CNN is simple to implement andtrain given the Faster R-CNN framework, which facilitatesa wide range of flexible architecture designs. Additionally,the mask branch only adds a small computational overhead,enabling a fast system and rapid experimentation. Mask R-CNN outputs a binary mask for each RoI and the classification depends on masks, which makes this system different from others. Instance segmentation enables us to obtain a pixel-wise mask for each individual object in an image. <br>
 Advantage：<br>
 1.Easy to generalize to other tasks.<br>
 2.Fast train and test speeds.<br>
@@ -49,7 +49,7 @@ Recommendations for a person who want to develop or use such systems
 
 conclusion
 ----
-The vision community has rapidly improved object detection and semantic segmentation results over a short period of time and will keep making it better in the future. A large part of these advances are the result of development of powerful  baseline  systems,  such  as  the  Fast/Faster  R-CNN and Fully Convolutional Network (FCN) frameworks for object detection. These methods are conceptually intuitiveand offer flexibility and robustness, together with fast training and inference time. <br>
+The vision community has rapidly improved object detection and semantic segmentation results over a short period of time and will keep making it better in the future. A large part of these advances are the result of development of powerful baseline  systems, such as the Fast/Faster R-CNN and Fully Convolutional Network (FCN) frameworks for object detection. These methods are conceptually intuitiveand offer flexibility and robustness, together with fast training and inference time. <br>
 
 references:
 --- 
