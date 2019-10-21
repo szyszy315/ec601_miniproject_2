@@ -6,7 +6,7 @@ Nowadays the development of large dataset and hardware make it possible to train
 
 R-CNN
 ----
-R-CNN makes use of region proposal method to creat many regions of interest and they wrap the regions into a fixed size image that fitted for CNN. Then the image will be processed by CNN and we can get a 4096-dimensional feature. Many layers will classify the image. But when there are too many proposals, the R-CNN can be very slow.
+R-CNN makes use of region proposal method to creat many regions of interest and then wrap the regions into a fixed size image that fitted for CNN. Then the image will be processed by CNN and we can get a 4096-dimensional feature. Many layers will classify the image. But when there are too many proposals, the R-CNN can be very slow.
 Drawbacks:<br>
 1.It cannot be implemented real time.<br>
 2.Expensive<br>
@@ -15,7 +15,7 @@ Drawbacks:<br>
 
 Fast R-CNN
 ----
-FastR-CNN achieves near real-time rates using very deep networks. Compared with R-CNN, Fast-RCNN is cheaper and quicker. Fast-RCNN swapes the order of getting region proposal and running the CNN, so Fast-RCNN only convert the image into the features map once. Then use Spatial Pyramid Pooling network (spp-net) to get region of interests (RoIs).RoI pooling wraps ROIs into one single layer and feeds them to fully connected layers for classification.<br>
+FastR-CNN achieves near real-time rates using very deep networks. Compared with R-CNN, Fast-RCNN is cheaper and quicker. Fast R-CNN swapes the order of getting region proposal and running the CNN, so Fast R-CNN only convert the image into the features map once. Then use Spatial Pyramid Pooling network (spp-net) to get region of interests (RoIs).RoI pooling wraps ROIs into one single layer and feeds them to fully connected layers for classification.<br>
 Drawbacks:<br>
 1.Selective search is a slow and time-consuming process affecting the performance of the network.<br>
 2.Not flexible.
